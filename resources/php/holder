@@ -1,0 +1,16 @@
+<?php
+  $first = true;
+  foreach($slides as $slide)
+  {
+    if ($first == true): ?>
+      <div class="slide active">
+    <?php else: ?>
+      <div class="slide next">
+    <?php endif;
+    include("slides/" . $slide);
+    ?>
+      </div>
+    <?php
+    $first = false;
+  }
+?>
